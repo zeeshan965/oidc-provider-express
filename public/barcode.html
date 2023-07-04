@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <style>
+        /** column base */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+        /** row base */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+        .video-container img {
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+
+        .decodeButton {
+            padding: 0.5em 1em;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>QR Code Scanner</h1>
+<div class="video-container">
+    <img class="img" src="./state-drivers-license-2d-bar-code-scanners-stationary-fixed-mount-32.jpg" alt=""/>
+    <button class="decodeButton">Decode</button>
+    <blockquote>
+        <p class="result"></p>
+    </blockquote>
+</div>
+<div class="video-container">
+    <img class="img" src="./driver-license-1000x633.jpg" alt=""/>
+    <button class="decodeButton">Decode</button>
+    <blockquote>
+        <p class="result"></p>
+    </blockquote>
+</div>
+<!--<script src="/@zxing/browser/cjs/readers/BrowserQRCodeReader.js"></script>-->
+<script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
