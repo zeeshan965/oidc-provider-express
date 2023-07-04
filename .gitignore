@@ -1,7 +1,7 @@
 # dotenv environment variables file
 .env
 ./migrations/sequelize/.env
-./migrations/sequelize/node_modules/*
+/migrations/sequelize/node_modules/
 
 # compiled output
 /dist
