@@ -10,7 +10,6 @@
 // npm i sequelize@^5.21.2
 import Sequelize from 'sequelize'; // eslint-disable-line import/no-unresolved
 
-console.log(process.env.DB_DEBUG)
 const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -18,7 +17,7 @@ const sequelize = new Sequelize(
     {
         host: process.env.DB_HOST,
         dialect: process.env.DB_DIALECT,
-        logging: process.env.DB_DEBUG
+        logging: process.env.DB_DEBUG === 'true'
     }
 );
 
